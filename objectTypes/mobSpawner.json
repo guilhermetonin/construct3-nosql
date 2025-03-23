@@ -1,0 +1,72 @@
+{
+	"name": "mobSpawner",
+	"plugin-id": "Sprite",
+	"sid": 420264264521150,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 172041580651252
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 300,
+						"height": 300,
+						"originX": 0.49833333333333335,
+						"originY": 0.485,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 669982,
+						"collisionPoly": {
+							"points": [
+								0.19166666666666668,
+								0.46999999999999964,
+								0.2683333333333333,
+								0.295,
+								0.42666666666666686,
+								0.20166666666666666,
+								0.6100000000000013,
+								0.21333333333333382,
+								0.735833333333334,
+								0.3047916666666672,
+								0.7900000000000001,
+								0.40625000000000056,
+								0.7862499999999991,
+								0.6086458333333336,
+								0.6774999999999997,
+								0.7427083333333326,
+								0.5450000000000002,
+								0.8008333333333326,
+								0.3991666666666665,
+								0.7845833333333332,
+								0.23166666666666666,
+								0.6483333333333349
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 609963082534617,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

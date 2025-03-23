@@ -1,0 +1,81 @@
+{
+	"name": "bala",
+	"plugin-id": "Sprite",
+	"sid": 300500826255286,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 122610050735640
+		},
+		{
+			"behaviorId": "destroy",
+			"name": "DestroyOutsideLayout",
+			"sid": 654700184533520
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 229,
+						"height": 147,
+						"originX": 0.47161572052401746,
+						"originY": 0.4421768707482993,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 6612152,
+						"collisionPoly": {
+							"points": [
+								0.006550218340611353,
+								0.11904761904761904,
+								0.24235807860262026,
+								0.020408163265306135,
+								0.5065502183406129,
+								0.013605442176870763,
+								0.7248908296943254,
+								0.07482993197278903,
+								0.9055676855895193,
+								0.23724489795918358,
+								0.9762554585152825,
+								0.37117346938775503,
+								0.9945414847161562,
+								0.5051020408163265,
+								0.9492358078602613,
+								0.6811224489795917,
+								0.8406113537117914,
+								0.8367346938775508,
+								0.7139737991266359,
+								0.9183673469387754,
+								0.553493449781658,
+								0.9761904761904762,
+								0.2489082969432314,
+								0.9778911564625855,
+								0.006550218340611353,
+								0.8835034013605448
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 342091948593334,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

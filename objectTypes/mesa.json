@@ -1,0 +1,62 @@
+{
+	"name": "mesa",
+	"plugin-id": "Sprite",
+	"sid": 230423549109205,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 661129838987759
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 52,
+						"height": 34,
+						"originX": 0.5192307692307693,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 4769124,
+						"collisionPoly": {
+							"points": [
+								0.09615384615384616,
+								0.029411764705882353,
+								0.9807692307692307,
+								0.14705882352941177,
+								0.9615384615384616,
+								0.9117647058823529,
+								0.9230769230769231,
+								0.9705882352941176,
+								0.038461538461538464,
+								0.8823529411764706,
+								0.019230769230769232,
+								0.20588235294117646
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 628971749021798,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

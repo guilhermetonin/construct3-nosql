@@ -1,0 +1,66 @@
+{
+	"name": "TV",
+	"plugin-id": "Sprite",
+	"sid": 769804072182316,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 978536030794371
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 60,
+						"height": 30,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 22606,
+						"collisionPoly": {
+							"points": [
+								0.43333333333333335,
+								0.03333333333333333,
+								0.5666666666666667,
+								0.03333333333333333,
+								0.9833333333333333,
+								0.26666666666666666,
+								0.9833333333333333,
+								0.6333333333333333,
+								0.5833333333333334,
+								0.9666666666666667,
+								0.4166666666666667,
+								0.9666666666666667,
+								0.016666666666666666,
+								0.6333333333333333,
+								0.03333333333333333,
+								0.23333333333333334
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 121926386882322,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

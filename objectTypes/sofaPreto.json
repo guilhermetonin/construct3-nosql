@@ -1,0 +1,118 @@
+{
+	"name": "sofaPreto",
+	"plugin-id": "Sprite",
+	"sid": 235353110876033,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 799806270367098
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 64,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 3738154,
+						"collisionPoly": {
+							"points": [
+								0.234375,
+								0.171875,
+								1,
+								0.171875,
+								1,
+								0.84375,
+								0.140625,
+								0.84375,
+								0.09375,
+								0.796875,
+								0.109375,
+								0.25
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 64,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 9398165,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.171875,
+								1,
+								0.171875,
+								1,
+								0.84375,
+								0,
+								0.84375
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 64,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 7226182,
+						"collisionPoly": {
+							"points": [
+								0.890625,
+								0.25,
+								0.90625,
+								0.796875,
+								0.859375,
+								0.84375,
+								0,
+								0.84375,
+								0,
+								0.171875,
+								0.765625,
+								0.171875
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 737068366819042,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

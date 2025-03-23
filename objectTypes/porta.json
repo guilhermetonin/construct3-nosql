@@ -1,0 +1,88 @@
+{
+	"name": "porta",
+	"plugin-id": "Sprite",
+	"sid": 862167933408294,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 964026687362049
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 66,
+						"height": 31,
+						"originX": 0.5,
+						"originY": -0.06451612903225806,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 6214567,
+						"collisionPoly": {
+							"points": [
+								0.015151515151515152,
+								0.03225806451612903,
+								0.9848484848484849,
+								0.03225806451612903,
+								0.9848484848484849,
+								0.6129032258064516,
+								0.2878787878787879,
+								0.967741935483871,
+								0.015151515151515152,
+								0.967741935483871
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 66,
+						"height": 31,
+						"originX": 0.5,
+						"originY": 1.064516129032258,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 7194481,
+						"collisionPoly": {
+							"points": [
+								0.015151515151515152,
+								0.03225806451612903,
+								0.2878787878787879,
+								0.03225806451612903,
+								0.9848484848484849,
+								0.3870967741935484,
+								0.9848484848484849,
+								0.967741935483871,
+								0.015151515151515152,
+								0.967741935483871
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 970752439956300,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

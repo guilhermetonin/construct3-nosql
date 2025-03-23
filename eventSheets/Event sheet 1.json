@@ -1,0 +1,1630 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "Score",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 952761795237235
+		},
+		{
+			"eventType": "variable",
+			"name": "flash",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 272327475507643
+		},
+		{
+			"eventType": "variable",
+			"name": "vida",
+			"type": "number",
+			"initialValue": "5",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 441872968330273
+		},
+		{
+			"eventType": "variable",
+			"name": "fireRange",
+			"type": "number",
+			"initialValue": "0.5",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 880458373012355
+		},
+		{
+			"eventType": "variable",
+			"name": "spawnerSeg",
+			"type": "number",
+			"initialValue": "3",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 700765462838136
+		},
+		{
+			"eventType": "variable",
+			"name": "spawnerSeg2",
+			"type": "number",
+			"initialValue": "5",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 406690252542375
+		},
+		{
+			"eventType": "variable",
+			"name": "Pontos",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 156029775395076
+		},
+		{
+			"eventType": "comment",
+			"text": "comecou"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 123180179802467
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "fundoGameOver",
+					"sid": 352244113306325,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "GameOver",
+					"sid": 801851237059606,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "NomeJogador",
+					"sid": 543659499619055,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "RankingDeJogadores",
+					"sid": 786989717080262,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Enviar",
+					"sid": 494967095285445,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Score",
+					"sid": 596579091988467,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "barraVida",
+					"sid": 938941639841260,
+					"parameters": {
+						"frame-number": "5"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "audio",
+					"sid": 862527277641120,
+					"parameters": {
+						"audio-file": "soundtrack",
+						"loop": "looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 655834090183561,
+					"parameters": {
+						"variable": "Score",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 540850336664716,
+					"parameters": {
+						"variable": "vida",
+						"value": "5"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 804575734531333,
+					"parameters": {
+						"variable": "spawnerSeg",
+						"value": "3"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 193088629541356,
+					"parameters": {
+						"variable": "spawnerSeg2",
+						"value": "5"
+					}
+				}
+			],
+			"sid": 420541668234014
+		},
+		{
+			"eventType": "comment",
+			"text": "comecou"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 574916373682891
+				}
+			],
+			"actions": [
+				{
+					"id": "set-angle-toward-position",
+					"objectClass": "player",
+					"sid": 980734302508263,
+					"parameters": {
+						"x": "Mouse.X",
+						"y": "Mouse.Y"
+					}
+				},
+				{
+					"id": "push-out-solid",
+					"objectClass": "zumbi",
+					"sid": 847416073563458,
+					"behaviorType": "Custom",
+					"parameters": {
+						"direction": "nearest"
+					}
+				},
+				{
+					"id": "set-max-speed",
+					"objectClass": "zumbi",
+					"sid": 294306175305469,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"speed": "random(100,200)"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Score",
+					"sid": 107791475740582,
+					"parameters": {
+						"text": "\"Score: \" & Score"
+					}
+				}
+			],
+			"sid": 353256660221934
+		},
+		{
+			"eventType": "comment",
+			"text": "quando a bala acertar a parede, sumir"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "bala",
+					"sid": 208112058994355,
+					"parameters": {
+						"object": "parede"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "bala",
+					"sid": 247144565662047
+				}
+			],
+			"sid": 359083782531295
+		},
+		{
+			"eventType": "comment",
+			"text": "zumbi tenta achar o player"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 831013434441516,
+					"parameters": {
+						"interval-seconds": "0.5"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "find-path",
+					"objectClass": "zumbi",
+					"sid": 801102947776611,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"x": "Player.X",
+						"y": "Player.Y"
+					}
+				}
+			],
+			"sid": 348623616107540
+		},
+		{
+			"eventType": "comment",
+			"text": "ao encontrar o player, o zombie vai correr atrás dele"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-path-found",
+					"objectClass": "zumbi",
+					"sid": 883042311519914,
+					"behaviorType": "Pathfinding"
+				}
+			],
+			"actions": [
+				{
+					"id": "move-along-path",
+					"objectClass": "zumbi",
+					"sid": 801998470418510,
+					"behaviorType": "Pathfinding"
+				}
+			],
+			"sid": 347646974298757
+		},
+		{
+			"eventType": "comment",
+			"text": "quando a bala acertar a zumbi, ele ira sumir + hitmark"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "bala",
+					"sid": 216835901743030,
+					"parameters": {
+						"object": "zumbi"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "bala",
+					"sid": 454530232047570
+				},
+				{
+					"id": "subtract-from-instvar",
+					"objectClass": "zumbi",
+					"sid": 720012559588077,
+					"parameters": {
+						"instance-variable": "ZumbiVida",
+						"value": "1"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "audio",
+					"sid": 929763550967202,
+					"parameters": {
+						"audio-file": "zombie",
+						"loop": "not-looping",
+						"volume": "-20",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 701306949305968
+		},
+		{
+			"eventType": "comment",
+			"text": "animação de quando ser atingido, pegando base sua vida + som da kill"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "zumbi",
+					"sid": 830252615942035,
+					"parameters": {
+						"instance-variable": "ZumbiVida",
+						"comparison": 3,
+						"value": "2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "zumbi",
+					"sid": 363654955114806,
+					"parameters": {
+						"animation": "\"Animation 2\"",
+						"from": "current-frame"
+					}
+				}
+			],
+			"sid": 734354512005654
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "zumbi",
+					"sid": 392862561921331,
+					"parameters": {
+						"instance-variable": "ZumbiVida",
+						"comparison": 3,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "zumbi",
+					"sid": 446312593337756,
+					"parameters": {
+						"animation": "\"Animation 3\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 370175173262438
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "zumbi",
+					"sid": 119745359088584,
+					"parameters": {
+						"instance-variable": "ZumbiVida",
+						"comparison": 3,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "zumbi",
+					"sid": 453223972380620
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 830713372230669,
+					"parameters": {
+						"variable": "Score",
+						"value": "10"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "audio",
+					"sid": 891722457081713,
+					"parameters": {
+						"audio-file": "zombiedead",
+						"loop": "not-looping",
+						"volume": "-10",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 639682616343499
+		},
+		{
+			"eventType": "comment",
+			"text": "ao player ser atingindo, o player pisca, como forma de indicação de dano"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "player",
+					"sid": 492925689827192,
+					"parameters": {
+						"object": "zumbi"
+					}
+				},
+				{
+					"id": "is-flashing",
+					"objectClass": "player",
+					"sid": 809586800282364,
+					"behaviorType": "Flash",
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "flash",
+					"objectClass": "player",
+					"sid": 536666495557425,
+					"behaviorType": "Flash",
+					"parameters": {
+						"on-time": "0.1",
+						"off-time": "0.1",
+						"duration": "Flash"
+					}
+				},
+				{
+					"id": "request-url",
+					"objectClass": "AJAX",
+					"sid": 822738291336057,
+					"parameters": {
+						"tag": "\"Atualizar\"",
+						"url": "\"https://dominationzumbi-default-rtdb.firebaseio.com/ranking.json\""
+					}
+				}
+			],
+			"sid": 948033981400508
+		},
+		{
+			"eventType": "comment",
+			"text": "terminando de piscar como sinal de dano, ele tira 1 da vida total"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-flash-ended",
+					"objectClass": "player",
+					"sid": 278841204414956,
+					"behaviorType": "Flash"
+				}
+			],
+			"actions": [
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 787058839229494,
+					"parameters": {
+						"variable": "vida",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 925529500420949
+		},
+		{
+			"eventType": "comment",
+			"text": "vida do jogador com animação de dano conforme a vida, a bala sair da arma e hud de vida"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 386020732238106,
+					"parameters": {
+						"variable": "vida",
+						"comparison": 0,
+						"value": "5"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "barraVida",
+					"sid": 328114295474532,
+					"parameters": {
+						"frame-number": "5"
+					}
+				}
+			],
+			"sid": 853731404109505,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-click",
+							"objectClass": "mouse",
+							"sid": 691463814166427,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked"
+							}
+						},
+						{
+							"id": "is-timer-running",
+							"objectClass": "player",
+							"sid": 114580655308758,
+							"behaviorType": "Timer",
+							"parameters": {
+								"tag": "\"fire\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "player",
+							"sid": 322968751995128,
+							"parameters": {
+								"animation": "\"Animation 1\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "player",
+							"sid": 672416233950137,
+							"parameters": {
+								"object": "bala",
+								"layer": "0",
+								"image-point": "1",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "start-timer",
+							"objectClass": "player",
+							"sid": 337612528346088,
+							"behaviorType": "Timer",
+							"parameters": {
+								"duration": "FireRange",
+								"type": "once",
+								"tag": "\"fire\""
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "player",
+							"sid": 397767454255899,
+							"parameters": {
+								"animation": "\"Animation 2\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 631825866598543,
+							"parameters": {
+								"seconds": "0.3",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "player",
+							"sid": 556094123015666,
+							"parameters": {
+								"animation": "\"Animation 1\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 634761414320359
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 195455808936788,
+					"parameters": {
+						"variable": "vida",
+						"comparison": 0,
+						"value": "4"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "barraVida",
+					"sid": 877842058061564,
+					"parameters": {
+						"frame-number": "4"
+					}
+				}
+			],
+			"sid": 839684474720288,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-click",
+							"objectClass": "mouse",
+							"sid": 349030055678133,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked"
+							}
+						},
+						{
+							"id": "is-timer-running",
+							"objectClass": "player",
+							"sid": 500358979973792,
+							"behaviorType": "Timer",
+							"parameters": {
+								"tag": "\"fire\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "player",
+							"sid": 220794486152948,
+							"parameters": {
+								"animation": "\"NormalVida4\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "player",
+							"sid": 948549377439147,
+							"parameters": {
+								"object": "bala",
+								"layer": "0",
+								"image-point": "1",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "start-timer",
+							"objectClass": "player",
+							"sid": 863924319498476,
+							"behaviorType": "Timer",
+							"parameters": {
+								"duration": "FireRange",
+								"type": "once",
+								"tag": "\"fire\""
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "player",
+							"sid": 329737005342270,
+							"parameters": {
+								"animation": "\"ATirandoVida4\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 848944075605548,
+							"parameters": {
+								"seconds": "0.3",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "player",
+							"sid": 418294049806684,
+							"parameters": {
+								"animation": "\"NormalVida4\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 470742624973459
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 237093878117003,
+					"parameters": {
+						"variable": "vida",
+						"comparison": 0,
+						"value": "3"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "barraVida",
+					"sid": 861928324367631,
+					"parameters": {
+						"frame-number": "3"
+					}
+				}
+			],
+			"sid": 795097737555960,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-click",
+							"objectClass": "mouse",
+							"sid": 138805057291084,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked"
+							}
+						},
+						{
+							"id": "is-timer-running",
+							"objectClass": "player",
+							"sid": 793573608660550,
+							"behaviorType": "Timer",
+							"parameters": {
+								"tag": "\"fire\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "player",
+							"sid": 825524474890516,
+							"parameters": {
+								"animation": "\"NormalVida3\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "player",
+							"sid": 495416845553904,
+							"parameters": {
+								"object": "bala",
+								"layer": "0",
+								"image-point": "1",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "start-timer",
+							"objectClass": "player",
+							"sid": 882865558564942,
+							"behaviorType": "Timer",
+							"parameters": {
+								"duration": "FireRange",
+								"type": "once",
+								"tag": "\"fire\""
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "player",
+							"sid": 408061399553657,
+							"parameters": {
+								"animation": "\"ATirandoVida3\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 843188663963534,
+							"parameters": {
+								"seconds": "0.3",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "player",
+							"sid": 596661835766967,
+							"parameters": {
+								"animation": "\"NormalVida3\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 277441496674576
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 738444754961767,
+					"parameters": {
+						"variable": "vida",
+						"comparison": 0,
+						"value": "2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "barraVida",
+					"sid": 820278157177088,
+					"parameters": {
+						"frame-number": "2"
+					}
+				}
+			],
+			"sid": 444732363272817,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-click",
+							"objectClass": "mouse",
+							"sid": 546599776372859,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked"
+							}
+						},
+						{
+							"id": "is-timer-running",
+							"objectClass": "player",
+							"sid": 289566454770882,
+							"behaviorType": "Timer",
+							"parameters": {
+								"tag": "\"fire\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "player",
+							"sid": 736564025957105,
+							"parameters": {
+								"animation": "\"NormalVida2\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "player",
+							"sid": 504977128328503,
+							"parameters": {
+								"object": "bala",
+								"layer": "0",
+								"image-point": "1",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "start-timer",
+							"objectClass": "player",
+							"sid": 622873901385479,
+							"behaviorType": "Timer",
+							"parameters": {
+								"duration": "FireRange",
+								"type": "once",
+								"tag": "\"fire\""
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "player",
+							"sid": 650915863925902,
+							"parameters": {
+								"animation": "\"ATirandoVida2\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 961761267510701,
+							"parameters": {
+								"seconds": "0.3",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "player",
+							"sid": 755091486025394,
+							"parameters": {
+								"animation": "\"NormalVida2\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 629576795611272
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 733336744447968,
+					"parameters": {
+						"variable": "vida",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "barraVida",
+					"sid": 437310017248746,
+					"parameters": {
+						"frame-number": "1"
+					}
+				}
+			],
+			"sid": 938010705261260,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-click",
+							"objectClass": "mouse",
+							"sid": 257483107981776,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked"
+							}
+						},
+						{
+							"id": "is-timer-running",
+							"objectClass": "player",
+							"sid": 241184014755199,
+							"behaviorType": "Timer",
+							"parameters": {
+								"tag": "\"fire\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "player",
+							"sid": 365391938430801,
+							"parameters": {
+								"animation": "\"NormalVida1\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "player",
+							"sid": 566096852268395,
+							"parameters": {
+								"object": "bala",
+								"layer": "0",
+								"image-point": "1",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "start-timer",
+							"objectClass": "player",
+							"sid": 627565985845474,
+							"behaviorType": "Timer",
+							"parameters": {
+								"duration": "FireRange",
+								"type": "once",
+								"tag": "\"fire\""
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "player",
+							"sid": 517471948866533,
+							"parameters": {
+								"animation": "\"ATirandoVida1\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 460135601720183,
+							"parameters": {
+								"seconds": "0.3",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "player",
+							"sid": 636447099678094,
+							"parameters": {
+								"animation": "\"NormalVida1\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 232902148231624
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 758143817411597,
+					"parameters": {
+						"variable": "vida",
+						"comparison": 3,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "player",
+					"sid": 710862239681372
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "barraVida",
+					"sid": 268516748236267,
+					"parameters": {
+						"frame-number": "0"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "fundoGameOver",
+					"sid": 270456677835699,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "GameOver",
+					"sid": 873229963626694,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "NomeJogador",
+					"sid": 421186663918941,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "RankingDeJogadores",
+					"sid": 541347454172049,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Enviar",
+					"sid": 651806942108044,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Score",
+					"sid": 214255820627927,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 265184156058804,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tweens-finished",
+							"objectClass": "mobSpawner",
+							"sid": 299905252701249,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"warning\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "stop-all-tweens",
+							"objectClass": "mobSpawner",
+							"sid": 639453712125877,
+							"behaviorType": "Tween"
+						},
+						{
+							"id": "destroy",
+							"objectClass": "mobSpawner",
+							"sid": 327610169203872
+						},
+						{
+							"id": "move-to-object",
+							"objectClass": "mobSpawner",
+							"sid": 779411024517548,
+							"parameters": {
+								"where": "in-front",
+								"object": "fundoGrama"
+							}
+						}
+					],
+					"sid": 623141188919683
+				}
+			]
+		},
+		{
+			"eventType": "comment",
+			"text": "reiniciar jogo"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "teclado",
+					"sid": 976052820159577,
+					"parameters": {
+						"key": 32
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 751478030127252
+				}
+			],
+			"sid": 105353234878525
+		},
+		{
+			"eventType": "comment",
+			"text": "converter setinhas para WASD"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "teclado",
+					"sid": 122748625849096,
+					"parameters": {
+						"key": 87
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "player",
+					"sid": 712514430297380,
+					"behaviorType": "8Direction",
+					"parameters": {
+						"control": "up"
+					}
+				}
+			],
+			"sid": 623890225532467
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "teclado",
+					"sid": 823986754181546,
+					"parameters": {
+						"key": 83
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "player",
+					"sid": 172084247584939,
+					"behaviorType": "8Direction",
+					"parameters": {
+						"control": "down"
+					}
+				}
+			],
+			"sid": 705231297208156
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "teclado",
+					"sid": 148213472366199,
+					"parameters": {
+						"key": 65
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "player",
+					"sid": 102612521851125,
+					"behaviorType": "8Direction",
+					"parameters": {
+						"control": "left"
+					}
+				}
+			],
+			"sid": 521072795185317
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "teclado",
+					"sid": 102612966732312,
+					"parameters": {
+						"key": 68
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "player",
+					"sid": 314160031580389,
+					"behaviorType": "8Direction",
+					"parameters": {
+						"control": "right"
+					}
+				}
+			],
+			"sid": 108944513905642
+		},
+		{
+			"eventType": "comment",
+			"text": "funcionamento do spawner em conjunto com o simbolo do mobspawner no mapa"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 791085918016797,
+					"parameters": {
+						"interval-seconds": "random(spawnerSeg,spawnerSeg2)"
+					}
+				},
+				{
+					"id": "pick-random-instance",
+					"objectClass": "System",
+					"sid": 546057916966002,
+					"parameters": {
+						"object": "spawner"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "spawner",
+					"sid": 913996966571260,
+					"parameters": {
+						"object": "mobSpawner",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "move-to-object",
+					"objectClass": "mobSpawner",
+					"sid": 628801200951555,
+					"parameters": {
+						"where": "behind",
+						"object": "parede"
+					}
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "mobSpawner",
+					"sid": 778450817757413,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"warning\"",
+						"property": "size",
+						"end-x": "0",
+						"end-y": "0",
+						"time": "2",
+						"ease": "easeincirc",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				}
+			],
+			"sid": 515420753364976
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tweens-finished",
+					"objectClass": "mobSpawner",
+					"sid": 314901713065996,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"warning\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "mobSpawner",
+					"sid": 881182596932543,
+					"parameters": {
+						"object": "zumbi",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "mobSpawner",
+					"sid": 114104729150388
+				},
+				{
+					"id": "move-to-object",
+					"objectClass": "mobSpawner",
+					"sid": 151729080026884,
+					"parameters": {
+						"where": "in-front",
+						"object": "fundoGrama"
+					}
+				}
+			],
+			"sid": 287143808573081
+		},
+		{
+			"eventType": "comment",
+			"text": "a cada 60seg ele tira -1 de cooldown de spawn dos zumbis e adiciona +1 na vida deles"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 705240786269308,
+					"parameters": {
+						"interval-seconds": "60"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-instvar",
+					"objectClass": "zumbi",
+					"sid": 981204781176827,
+					"parameters": {
+						"instance-variable": "ZumbiVida",
+						"value": "1"
+					}
+				},
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 747869138747652,
+					"parameters": {
+						"variable": "spawnerSeg",
+						"value": "1"
+					}
+				},
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 328076551000551,
+					"parameters": {
+						"variable": "spawnerSeg2",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 607746643080104
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-completed",
+					"objectClass": "AJAX",
+					"sid": 745243362678068,
+					"parameters": {
+						"tag": "\"Atualizar\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 156785512028204,
+					"parameters": {
+						"variable": "Pontos",
+						"value": "AJAX.LastData"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 405114740560349,
+					"parameters": {
+						"variable": "Pontos",
+						"value": "replace(Pontos,\"{\",\"\")"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 496897860311891,
+					"parameters": {
+						"variable": "Pontos",
+						"value": "replace(Pontos,\":\",\": \")"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 854823016209657,
+					"parameters": {
+						"variable": "Pontos",
+						"value": "replace(Pontos,\"}\",\"\")"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 583799743104749,
+					"parameters": {
+						"variable": "Pontos",
+						"value": "replace(Pontos,\"\"\"\",\"\")"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 121656860084410,
+					"parameters": {
+						"variable": "Pontos",
+						"value": "replace(Pontos,\",\",newline)"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "RankingDeJogadores",
+					"sid": 202118987751153,
+					"parameters": {
+						"text": "Pontos"
+					}
+				}
+			],
+			"sid": 340325458367033
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "Enviar",
+					"sid": 963208382877766
+				}
+			],
+			"actions": [
+				{
+					"id": "post-to-url",
+					"objectClass": "AJAX",
+					"sid": 843184594585732,
+					"parameters": {
+						"tag": "\"Enviar\"",
+						"url": "\"https://dominationzumbi-default-rtdb.firebaseio.com/ranking.json\"",
+						"data": " \"{\"\"\"&NomeJogador.Text&\"\"\" : \"&Score&\"}\"\r",
+						"method": "\"PATCH\""
+					}
+				}
+			],
+			"sid": 345127654164275
+		}
+	],
+	"sid": 812736980521505
+}
