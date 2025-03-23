@@ -11,7 +11,11 @@
 
    - Acesse [Domination Zombie](https://www.construct.net/en/free-online-games/domzombie-74961/play) no seu navegador ou aplicativo.
      
-## 📜 Descrição
+## 📜 Aplicação
+
+[NoConstruct3](https://github.com/guilhermetonin/construct3-nosql/blob/08b9d4e67a9228523a954be422e15a91206d735b/images/implementacao.png)
+
+
 
 Consiste em enfrentar hordas de zumbis, tentando sobreviver o maior tempo possível. Possui diversos recursos como:
 
@@ -24,6 +28,13 @@ Consiste em enfrentar hordas de zumbis, tentando sobreviver o maior tempo possí
 - **Animações e Sons**: Contém animações de dano, de tiro e sons, como o de acertos e elimnações e música de fundo.
 - **Registro de Pontuação**: A pontuação do jogador é salva no Firebase após cada partida.
 - **Scoreboard**: O Firebase armazena as pontuações, permitindo que o jogador veja seu desempenho comparado aos outros.
+
+
+
+
+
+
+
 
 ## 🎨 Créditos
 
