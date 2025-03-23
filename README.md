@@ -27,7 +27,13 @@
 
 ![Firebase](https://github.com/guilhermetonin/construct3-nosql/blob/c106629a63d0152ef7637d0729f7b08bb812b25a/images/implementacao4.png)
 
-### Recursos:
+
+
+https://github.com/user-attachments/assets/c50ef878-2964-467d-9edc-fb885d07486c
+
+
+
+## Recursos:
 
 Consiste em enfrentar hordas de zumbis, tentando sobreviver o maior tempo possível.
 
@@ -37,7 +43,9 @@ Consiste em enfrentar hordas de zumbis, tentando sobreviver o maior tempo possí
 - **Animações e Sons**: contém animações de dano, de tiro e sons, como o de acertos e elimnações e música de fundo.
 - **Scoreboard**: o Firebase armazena as pontuações, permitindo que o jogador veja seu desempenho comparado aos outros.
 
-__________________________________________________________________________________________________________________________________________
+
+
+________________________________________________________________________________________________________________________
 
 ###  Créditos
 
