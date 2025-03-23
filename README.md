@@ -1,18 +1,19 @@
-# Jogo de Sobrevivência com Firebase Realtime Database
+![DOM. ZOMBIE](https://github.com/guilhermetonin/construct3-nosql/blob/53f2c16655a0b6acbfb8a6d1fca2dde0be869129/images/logogame.png)
 
-**DominationZombie** é um jogo de sobrevivência desenvolvido na plataforma **Construct 3**. O objetivo do jogo é sobreviver aos zumbis que nascem e tentar pontuar o máximo possível. A integração com o **Firebase** foi implementada para salvar a pontuação feita pelo jogador.
 
-## ⌨️ Teclas 
+É um jogo de sobrevivência desenvolvido na plataforma **Construct 3**. O objetivo do jogo é sobreviver aos zumbis que nascem e tentar pontuar o máximo possível. A integração com a **Firebase Realtime Database** foi implementada para salvar a pontuação feita pelo jogador.
+
+## Comandos: 
 
 - Use as teclas de direção **"WASD"** ou as **setas** para mover.
 - Atire com o botão esquerdo do mouse.
 - Pressione "**Espaço**" para reiniciar o mapa.
 
-## 🎮 Jogue agora
+## Jogue agora:
 
-   - Acesse [Domination Zombie](https://www.construct.net/en/free-online-games/domzombie-74961/play) no seu navegador ou aplicativo.
+   - Acesse [DominationZombie](https://www.construct.net/en/free-online-games/domzombie-74961/play) no seu navegador.
      
-## 📜 Aplicação
+## Aplicação:
 
    - No Construct 3, foram usadas essas ações para implementar o Firebase Realtime Database dentro do jogo.
 
@@ -26,27 +27,19 @@
 
 ![Firebase](https://github.com/guilhermetonin/construct3-nosql/blob/c106629a63d0152ef7637d0729f7b08bb812b25a/images/implementacao4.png)
 
+### Recursos:
 
-Consiste em enfrentar hordas de zumbis, tentando sobreviver o maior tempo possível. Possui diversos recursos como:
+Consiste em enfrentar hordas de zumbis, tentando sobreviver o maior tempo possível.
 
-- **Sistema de Arma**: Atire nos zumbis para matar-los
-- **Dificuldade**: A cada 60 segundos os nascem mais rápido.
-- **Ranking de pontuação**: A pontuação é salva no Firebase, permitindo que o jogador visualize seu desempenho em relação a outros.
+- **Sistema de Arma**: atire nos zumbis para matar-los
+- **Dificuldade**: a cada 60 segundos os nascem mais rápido.
+- **Pontuação**: mate zumbis para aumentar sua pontuação
+- **Animações e Sons**: contém animações de dano, de tiro e sons, como o de acertos e elimnações e música de fundo.
+- **Scoreboard**: o Firebase armazena as pontuações, permitindo que o jogador veja seu desempenho comparado aos outros.
 
-### Funcionalidades
+__________________________________________________________________________________________________________________________________________
 
-- **Animações e Sons**: Contém animações de dano, de tiro e sons, como o de acertos e elimnações e música de fundo.
-- **Registro de Pontuação**: A pontuação do jogador é salva no Firebase após cada partida.
-- **Scoreboard**: O Firebase armazena as pontuações, permitindo que o jogador veja seu desempenho comparado aos outros.
-
-
-
-
-
-
-
-
-## 🎨 Créditos
+###  Créditos
 
 - **Sprites** de zumbis, personagens e objetos foram criados por **"Kenney.nl"** ou **"www.kenney.nl"**.
 - **Música de fundo** foi criada por **Zach Beever** e **Armin Hass**, estão dentro do jogo "Project Zomboid".
